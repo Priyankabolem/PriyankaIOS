@@ -17,5 +17,11 @@ class PlayWithAlphaNumVC: UIViewController {
 
     @IBOutlet weak var headerLBL: UILabel!
     
+    @IBAction func secondNumStepper(_ sender: Any) {
+    }
+    @IBAction func firstNumStepper(_ sender: Any) {
+    }
+    @IBOutlet weak var secondNumLBL: UILabel!
+    @IBOutlet weak var firstNumLBL: UILabel!
 }
 
