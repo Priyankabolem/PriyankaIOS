@@ -34,11 +34,15 @@ class PlayWithAlphaNumVC: UIViewController {
     
     @IBOutlet weak var headerLBL: UILabel!
     
-    @IBAction func secondNumStepper(_ sender: Any) {
+    @IBAction func secondNumStepper(_ sender: UIStepper) {
+        secondNumLBL.text = "\(Int(sender.value))"
     }
     
     
-    @IBAction func firstNumStepper(_ sender: Any) {
+    @IBAction func firstNumStepper(_ sender: UIStepper) {
+        firstNumLBL.text = "\(Int(sender.value))"
+        
+       // String(format:"%.0f",sender.value)
     }
     
     @IBOutlet weak var secondNumLBL: UILabel!
