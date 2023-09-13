@@ -45,8 +45,10 @@ class PlayWithAlphaNumVC: UIViewController {
        // String(format:"%.0f",sender.value)
     }
     
-    @IBOutlet weak var secondNumLBL: UILabel!
     @IBOutlet weak var firstNumLBL: UILabel!
+    
+    @IBOutlet weak var secondNumLBL: UILabel!
+    
     
     @IBOutlet weak var firstStrTF: UITextField!
     
@@ -112,6 +114,18 @@ class PlayWithAlphaNumVC: UIViewController {
         
         
         @IBAction func onReset(_ sender: Any) {
+            optionsSWCH[0].isOn=false
+                    optionsSWCH[1].isOn=false
+                    messageTV.text=""
+                    stringAndPatternBTN[0].isEnabled=false
+                    stringAndPatternBTN[1].isEnabled=false
+                    
+                    numbersStepper[0].isEnabled=false
+                    numbersStepper[1].isEnabled=false
+                    firstStrTF.text=""
+                    secondStrTF.text=""
+                    firstNumLBL.text=""
+                    secondNumLBL.text=""
         }
         
         

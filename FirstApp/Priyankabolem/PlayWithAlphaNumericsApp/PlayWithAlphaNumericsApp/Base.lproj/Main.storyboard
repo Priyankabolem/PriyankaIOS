@@ -232,9 +232,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstNumLBL" destination="Baa-SG-EQc" id="crI-FX-Pa9"/>
                         <outlet property="firstStrTF" destination="Svv-Pp-Jhe" id="tHA-dx-nLF"/>
                         <outlet property="headerLBL" destination="avP-b2-g0X" id="Jib-3K-fLj"/>
                         <outlet property="messageTV" destination="f7n-iB-UzO" id="ApO-Zh-0SJ"/>
+                        <outlet property="secondNumLBL" destination="C5n-Ft-ajM" id="BJL-4L-tc7"/>
                         <outlet property="secondStrTF" destination="vy0-u3-o06" id="0II-b3-Pb7"/>
                         <outletCollection property="numbersStepper" destination="t5i-sR-XPu" collectionClass="NSMutableArray" id="rdn-yK-oJI"/>
                         <outletCollection property="numbersStepper" destination="CHj-dd-dPQ" collectionClass="NSMutableArray" id="Phd-3y-5Bk"/>
