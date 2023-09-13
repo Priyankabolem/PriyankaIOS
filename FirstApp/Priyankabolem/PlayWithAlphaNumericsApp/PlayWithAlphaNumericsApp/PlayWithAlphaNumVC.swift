@@ -69,11 +69,27 @@ class PlayWithAlphaNumVC: UIViewController {
             firstStrTF.isEnabled = false
             secondStrTF.isEnabled = false
             stringAndPatternBTN[0].isEnabled = false
+            self.numbersStepper[0].isEnabled = false
+            self.numbersStepper[1].isEnabled = false
             }
     }
 
     @IBAction func stringSWCH(_ sender: UISwitch) {
-        //if(sender.isOn ==true){
+        if(sender.isOn == true){
+            //optionsSWCH[1].isOn
+            self.stringAndPatternBTN[1].isEnabled = true
+            firstStrTF.isEnabled = true
+            secondStrTF.isEnabled = true
+          
+        } else{
+            //optionsSWCH[1].isOn
+            self.numbersStepper[0].isEnabled = false
+            self.numbersStepper[1].isEnabled = false
+            stringAndPatternBTN[0].isEnabled = false
+            stringAndPatternBTN[1].isEnabled = false
+            firstStrTF.isEnabled = false
+            secondStrTF.isEnabled = false
+            }
         }
         
         
