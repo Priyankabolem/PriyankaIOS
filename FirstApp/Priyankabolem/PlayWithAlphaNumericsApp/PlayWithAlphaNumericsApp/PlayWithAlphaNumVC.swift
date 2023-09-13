@@ -12,30 +12,50 @@ class PlayWithAlphaNumVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.headerLBL.text = String(format:"%@\nPlay with AlphaNumberics","\u{0c38}\u{0c4d}\u{0c35}\u{0c3e}\u{0c17}\u{0c24}\u{0c02}")
+        self.headerLBL.text = String(format:"%@\nPlay with AlphaNumerics™","\u{0c38}\u{0c4d}\u{0c35}\u{0c3e}\u{0c17}\u{0c24}\u{0c02}")
+        
+        self.numbersStepper[0].isEnabled = false
+        self.numbersStepper[1].isEnabled = false
+        optionsSWCH[0].isOn = false
+        optionsSWCH[1].isOn = false
+        self.stringAndPatternBTN[0].isEnabled = false
+        self.stringAndPatternBTN[1].isEnabled = false
+        stringAndPatternBTN[0].isEnabled = false
+        firstStrTF.isEnabled = false
+        secondStrTF.isEnabled = false
+        
+        
+        
+        
+        
+        
+        
     }
     
     @IBOutlet weak var headerLBL: UILabel!
     
     @IBAction func secondNumStepper(_ sender: Any) {
     }
+    
+    
     @IBAction func firstNumStepper(_ sender: Any) {
     }
+    
     @IBOutlet weak var secondNumLBL: UILabel!
     @IBOutlet weak var firstNumLBL: UILabel!
     
-    @IBAction func firstStrTF(_ sender: Any) {
-    }
+    @IBOutlet weak var firstStrTF: UITextField!
+    
+    @IBOutlet weak var secondStrTF: UITextField!
+    
+    
+    @IBOutlet var optionsSWCH: [UISwitch]!
+
     
     @IBAction func numberSWCH(_ sender: Any) {
+        //sender.isOn
     }
-    
-    @IBAction func secondStrTF(_ sender: Any) {
-    }
-    
-    @IBAction func optionsSWCH(_ sender: UISwitch) {
-    }
-    
+
     @IBAction func stringSWCH(_ sender: Any) {
     }
     

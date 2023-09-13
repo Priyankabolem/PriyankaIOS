@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="960-x2-POt" userLabel="BigContainerSV">
                                 <rect key="frame" x="20" y="79" width="353" height="719"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avP-b2-g0X">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avP-b2-g0X">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="72"/>
                                         <color key="backgroundColor" red="0.0" green="0.40392156862745099" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
@@ -46,8 +46,6 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                 <connections>
                                                                     <action selector="numberSWCH:" destination="BYZ-38-t0r" eventType="valueChanged" id="McR-D5-aty"/>
-                                                                    <action selector="optionsSWCH:" destination="BYZ-38-t0r" eventType="valueChanged" id="3F6-pf-kQb"/>
-                                                                    <action selector="secondStrTF:" destination="BYZ-38-t0r" eventType="valueChanged" id="wET-n4-XNg"/>
                                                                 </connections>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdd-BJ-mKo">
@@ -64,8 +62,7 @@
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1i8-hE-FtH">
                                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                                                 <connections>
-                                                                    <action selector="optionsSWCH:" destination="BYZ-38-t0r" eventType="valueChanged" id="44p-jQ-ukB"/>
-                                                                    <action selector="stringSWCH:" destination="BYZ-38-t0r" eventType="valueChanged" id="5mP-W3-07S"/>
+                                                                    <action selector="stringSWCH:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xtk-le-KoY"/>
                                                                 </connections>
                                                             </switch>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vm-6H-bhh">
@@ -142,17 +139,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="67.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="firstStrTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="YGB-fK-NUa"/>
-                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second string value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vy0-u3-o06" userLabel="Second Str InputTF">
                                                 <rect key="frame" x="0.0" y="75.666666666666686" width="353" height="68"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="secondStrTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="2Zo-Qt-dZl"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -241,12 +232,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstStrTF" destination="Svv-Pp-Jhe" id="tHA-dx-nLF"/>
                         <outlet property="headerLBL" destination="avP-b2-g0X" id="Jib-3K-fLj"/>
                         <outlet property="messageTV" destination="f7n-iB-UzO" id="ApO-Zh-0SJ"/>
+                        <outlet property="secondStrTF" destination="vy0-u3-o06" id="0II-b3-Pb7"/>
                         <outletCollection property="numbersStepper" destination="t5i-sR-XPu" collectionClass="NSMutableArray" id="rdn-yK-oJI"/>
                         <outletCollection property="numbersStepper" destination="CHj-dd-dPQ" collectionClass="NSMutableArray" id="Phd-3y-5Bk"/>
                         <outletCollection property="stringAndPatternBTN" destination="GtV-MJ-9wy" collectionClass="NSMutableArray" id="5aW-PK-Ynw"/>
                         <outletCollection property="stringAndPatternBTN" destination="qKt-iz-3Z0" collectionClass="NSMutableArray" id="WCI-n8-3qe"/>
+                        <outletCollection property="optionsSWCH" destination="p52-MZ-eG9" collectionClass="NSMutableArray" id="IDF-bH-uat"/>
+                        <outletCollection property="optionsSWCH" destination="1i8-hE-FtH" collectionClass="NSMutableArray" id="qN2-ek-9Hc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
