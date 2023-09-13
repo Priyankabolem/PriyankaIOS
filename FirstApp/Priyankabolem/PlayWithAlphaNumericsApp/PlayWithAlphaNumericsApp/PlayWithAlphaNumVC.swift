@@ -36,6 +36,9 @@ class PlayWithAlphaNumVC: UIViewController {
     @IBAction func optionsSWCH(_ sender: UISwitch) {
     }
     
+    @IBAction func stringSWCH(_ sender: Any) {
+    }
+    
     
     @IBAction func generatePattern(_ sender: UIButton) {
     }
@@ -51,7 +54,9 @@ class PlayWithAlphaNumVC: UIViewController {
     @IBOutlet weak var messageTV: UITextView!
     
     
-   
+    @IBAction func onReset(_ sender: Any) {
+    }
+    
     
     
 }
