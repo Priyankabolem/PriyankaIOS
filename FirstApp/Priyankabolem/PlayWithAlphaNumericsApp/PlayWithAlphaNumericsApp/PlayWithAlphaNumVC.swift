@@ -52,31 +52,48 @@ class PlayWithAlphaNumVC: UIViewController {
     @IBOutlet var optionsSWCH: [UISwitch]!
 
     
-    @IBAction func numberSWCH(_ sender: Any) {
+    @IBAction func numberSWCH(_ sender: UISwitch) {
         //sender.isOn
+        //self.numbersStepper[0].isEnabled = true
+        //self.numbersStepper[1].isEnabled = true
+        //stringAndPatternBTN[0].isEnabled = true
+        if(sender.isOn == true){
+            //optionsSWCH[0].isOn
+            self.numbersStepper[0].isEnabled = true
+            self.numbersStepper[1].isEnabled = true
+            stringAndPatternBTN[0].isEnabled = true
+          
+        } else{
+            //optionsSWCH[1].isOn
+            self.stringAndPatternBTN[1].isEnabled = false
+            firstStrTF.isEnabled = false
+            secondStrTF.isEnabled = false
+            stringAndPatternBTN[0].isEnabled = false
+            }
     }
 
-    @IBAction func stringSWCH(_ sender: Any) {
+    @IBAction func stringSWCH(_ sender: UISwitch) {
+        //if(sender.isOn ==true){
+        }
+        
+        
+        @IBAction func generatePattern(_ sender: UIButton) {
+        }
+        
+        @IBAction func manipulateStrings(_ sender: UIButton) {
+        }
+        
+        
+        @IBOutlet var stringAndPatternBTN: [UIButton]!
+        
+        @IBOutlet var numbersStepper: [UIStepper]!
+        
+        @IBOutlet weak var messageTV: UITextView!
+        
+        
+        @IBAction func onReset(_ sender: Any) {
+        }
+        
+        
     }
-    
-    
-    @IBAction func generatePattern(_ sender: UIButton) {
-    }
-    
-    @IBAction func manipulateStrings(_ sender: UIButton) {
-    }
-    
-    
-    @IBOutlet var stringAndPatternBTN: [UIButton]!
-    
-    @IBOutlet var numbersStepper: [UIStepper]!
-    
-    @IBOutlet weak var messageTV: UITextView!
-    
-    
-    @IBAction func onReset(_ sender: Any) {
-    }
-    
-    
-    
-}
+
